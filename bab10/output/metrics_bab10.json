@@ -1,0 +1,230 @@
+{
+  "seed": 42,
+  "n_samples": 240,
+  "n_positive": 60,
+  "n_negative": 180,
+  "threshold_0_50": {
+    "threshold": 0.5,
+    "tn": 175,
+    "fp": 5,
+    "fn": 5,
+    "tp": 55,
+    "sensitivity": 0.9166666666666666,
+    "specificity": 0.9722222222222222,
+    "precision": 0.9166666666666666,
+    "accuracy": 0.9583333333333334
+  },
+  "tradeoff": [
+    {
+      "threshold": 0.1,
+      "tn": 11,
+      "fp": 169,
+      "fn": 0,
+      "tp": 60,
+      "sensitivity": 1.0,
+      "specificity": 0.06111111111111111,
+      "precision": 0.26200873362445415,
+      "accuracy": 0.29583333333333334
+    },
+    {
+      "threshold": 0.15000000000000002,
+      "tn": 39,
+      "fp": 141,
+      "fn": 0,
+      "tp": 60,
+      "sensitivity": 1.0,
+      "specificity": 0.21666666666666667,
+      "precision": 0.29850746268656714,
+      "accuracy": 0.4125
+    },
+    {
+      "threshold": 0.20000000000000004,
+      "tn": 67,
+      "fp": 113,
+      "fn": 0,
+      "tp": 60,
+      "sensitivity": 1.0,
+      "specificity": 0.37222222222222223,
+      "precision": 0.3468208092485549,
+      "accuracy": 0.5291666666666667
+    },
+    {
+      "threshold": 0.25000000000000006,
+      "tn": 105,
+      "fp": 75,
+      "fn": 0,
+      "tp": 60,
+      "sensitivity": 1.0,
+      "specificity": 0.5833333333333334,
+      "precision": 0.4444444444444444,
+      "accuracy": 0.6875
+    },
+    {
+      "threshold": 0.30000000000000004,
+      "tn": 132,
+      "fp": 48,
+      "fn": 0,
+      "tp": 60,
+      "sensitivity": 1.0,
+      "specificity": 0.7333333333333333,
+      "precision": 0.5555555555555556,
+      "accuracy": 0.8
+    },
+    {
+      "threshold": 0.3500000000000001,
+      "tn": 147,
+      "fp": 33,
+      "fn": 2,
+      "tp": 58,
+      "sensitivity": 0.9666666666666667,
+      "specificity": 0.8166666666666667,
+      "precision": 0.6373626373626373,
+      "accuracy": 0.8541666666666666
+    },
+    {
+      "threshold": 0.40000000000000013,
+      "tn": 158,
+      "fp": 22,
+      "fn": 3,
+      "tp": 57,
+      "sensitivity": 0.95,
+      "specificity": 0.8777777777777778,
+      "precision": 0.7215189873417721,
+      "accuracy": 0.8958333333333334
+    },
+    {
+      "threshold": 0.45000000000000007,
+      "tn": 170,
+      "fp": 10,
+      "fn": 4,
+      "tp": 56,
+      "sensitivity": 0.9333333333333333,
+      "specificity": 0.9444444444444444,
+      "precision": 0.8484848484848485,
+      "accuracy": 0.9416666666666667
+    },
+    {
+      "threshold": 0.5000000000000001,
+      "tn": 175,
+      "fp": 5,
+      "fn": 5,
+      "tp": 55,
+      "sensitivity": 0.9166666666666666,
+      "specificity": 0.9722222222222222,
+      "precision": 0.9166666666666666,
+      "accuracy": 0.9583333333333334
+    },
+    {
+      "threshold": 0.5500000000000002,
+      "tn": 177,
+      "fp": 3,
+      "fn": 10,
+      "tp": 50,
+      "sensitivity": 0.8333333333333334,
+      "specificity": 0.9833333333333333,
+      "precision": 0.9433962264150944,
+      "accuracy": 0.9458333333333333
+    },
+    {
+      "threshold": 0.6000000000000002,
+      "tn": 178,
+      "fp": 2,
+      "fn": 15,
+      "tp": 45,
+      "sensitivity": 0.75,
+      "specificity": 0.9888888888888889,
+      "precision": 0.9574468085106383,
+      "accuracy": 0.9291666666666667
+    },
+    {
+      "threshold": 0.6500000000000001,
+      "tn": 178,
+      "fp": 2,
+      "fn": 23,
+      "tp": 37,
+      "sensitivity": 0.6166666666666667,
+      "specificity": 0.9888888888888889,
+      "precision": 0.9487179487179487,
+      "accuracy": 0.8958333333333334
+    },
+    {
+      "threshold": 0.7000000000000002,
+      "tn": 180,
+      "fp": 0,
+      "fn": 31,
+      "tp": 29,
+      "sensitivity": 0.48333333333333334,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "accuracy": 0.8708333333333333
+    },
+    {
+      "threshold": 0.7500000000000002,
+      "tn": 180,
+      "fp": 0,
+      "fn": 40,
+      "tp": 20,
+      "sensitivity": 0.3333333333333333,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "accuracy": 0.8333333333333334
+    },
+    {
+      "threshold": 0.8000000000000002,
+      "tn": 180,
+      "fp": 0,
+      "fn": 49,
+      "tp": 11,
+      "sensitivity": 0.18333333333333332,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "accuracy": 0.7958333333333333
+    },
+    {
+      "threshold": 0.8500000000000002,
+      "tn": 180,
+      "fp": 0,
+      "fn": 56,
+      "tp": 4,
+      "sensitivity": 0.06666666666666667,
+      "specificity": 1.0,
+      "precision": 1.0,
+      "accuracy": 0.7666666666666667
+    },
+    {
+      "threshold": 0.9000000000000002,
+      "tn": 180,
+      "fp": 0,
+      "fn": 60,
+      "tp": 0,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "precision": 0.0,
+      "accuracy": 0.75
+    }
+  ],
+  "calibration": {
+    "brier_score": 0.08719583586497787,
+    "mean_predicted_probability": [
+      0.10440015753228117,
+      0.16159649996393868,
+      0.2114682715688859,
+      0.2528210096048002,
+      0.30911037073716485,
+      0.41600216094288167,
+      0.6062291164426552,
+      0.7804283742424291
+    ],
+    "fraction_positive": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.06666666666666667,
+      0.1,
+      0.8333333333333334,
+      1.0
+    ]
+  },
+  "note": "Synthetic pedagogical data; not clinical validation."
+}

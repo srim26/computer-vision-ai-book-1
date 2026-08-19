@@ -1,0 +1,15 @@
+name: cvai-book
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy
+      - opencv-python
+      - matplotlib
+      - scikit-learn
+      - tensorflow
+      - torch
+      - torchvision
+      - pillow
