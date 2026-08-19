@@ -1,99 +1,212 @@
-# Computer Vision & AI — Dari Pixel hingga Analisis Citra Medis
+# Computer Vision & AI
+## Dari Pixel hingga Analisis Citra Medis
 
-Repository pendamping untuk buku **Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis**  
-oleh **Sri Mulyono, Kusworo Adi, dan Aris Sugiharto**.
+Repository pendamping buku **Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis**.
 
-Repository ini berisi kode praktik, aset yang diizinkan untuk dibagikan, dataset sintetis,
-dan output eksperimen yang mendukung **Compact Edition 10 bab**. Struktur repository
-mengikuti nomor bab pada buku, bukan struktur produksi 13 bab sebelumnya.
+Repository ini menyediakan kode Python, contoh citra, dataset sintetis, serta praktik yang digunakan untuk membantu pembaca memahami perjalanan dari representasi pixel hingga penerapan Computer Vision dan Artificial Intelligence pada citra medis.
 
-## Struktur
+Buku dirancang dengan pendekatan bertahap:
 
-| Folder | Materi utama |
+**Pixel → Citra Digital → Image Processing → Representasi Fitur → Machine Learning → Deep Learning → CNN → Transfer Learning → Object Detection → Image Segmentation → Medical Imaging → Medical AI**
+
+Repository ini bukan pengganti pembahasan dalam buku. Kode dibuat ringkas agar pembaca dapat mencoba kembali konsep dan eksperimen yang dibahas pada masing-masing bab.
+
+---
+
+## Struktur Repository
+
+```text
+.
+├── bab01/
+├── bab02/
+├── bab03/
+├── bab04/
+├── bab05/
+├── bab06/
+├── bab07/
+├── bab08/
+├── bab09/
+├── bab10/
+├── ASSET_LICENSES.md
+├── environment.yml
+├── requirements.txt
+└── verify_repository.py
+```
+
+### Ringkasan Praktik
+
+| Bab | Topik praktik |
 |---|---|
-| `bab01/` | Citra sebagai data numerik |
-| `bab02/` | Pixel dan citra digital |
-| `bab03/` | Image processing, fitur, dan feature vector |
-| `bab04/` | Machine Learning dan classification |
-| `bab05/` | Convolutional Neural Network (CNN) |
-| `bab06/` | Transfer Learning; Vision Transformer dibahas konseptual dalam buku |
-| `bab07/` | Object Detection dengan Faster R-CNN |
-| `bab08/` | Image Segmentation dengan Mini U-Net |
-| `bab09/` | Medical Imaging, CT sintetis, windowing, dan measurement |
-| `bab10/` | Medical AI dan evaluasi sintetis |
+| `bab01` | Membaca citra dan mengenali citra sebagai data numerik |
+| `bab02` | Pixel, array, warna, dan citra grayscale |
+| `bab03` | Image processing dan ekstraksi fitur |
+| `bab04` | Machine Learning untuk klasifikasi citra |
+| `bab05` | Convolutional Neural Network (CNN) |
+| `bab06` | Transfer Learning dengan MobileNetV2 |
+| `bab07` | Object Detection dengan Faster R-CNN |
+| `bab08` | Image Segmentation dengan Mini U-Net |
+| `bab09` | Medical Imaging, CT, windowing, dan pengukuran |
+| `bab10` | Evaluasi Medical AI, threshold, sensitivity, specificity, dan calibration |
+
+Tidak semua bagian konseptual dalam buku memerlukan praktik tersendiri. Karena itu, struktur repository berfokus pada eksperimen yang paling membantu pembaca memahami konsep melalui kode.
+
+---
 
 ## Environment
 
-Buku menggunakan satu environment utama bernama `cvai-book`.
+Seluruh praktik dirancang menggunakan satu environment utama:
+
+```text
+cvai-book
+```
+
+Environment dapat dibuat menggunakan Conda:
 
 ```bash
 conda env create -f environment.yml
 conda activate cvai-book
 ```
 
-Alternatif:
+Alternatifnya, dependency Python dapat dipasang menggunakan:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> Beberapa praktik mengunduh dataset atau pretrained weights dari sumber resmi dan
-> karena itu memerlukan koneksi internet saat pertama dijalankan.
+Versi library dapat berubah dari waktu ke waktu. Jika terjadi perbedaan perilaku pada versi yang lebih baru, gunakan konfigurasi pada `environment.yml` sebagai acuan utama.
 
-## Cara menggunakan
+---
 
-1. Aktifkan environment `cvai-book`.
-2. Masuk ke folder bab yang ingin dipelajari.
-3. Baca komentar pada skrip dan README bab (jika tersedia).
-4. Jalankan kode dari direktori bab agar path relatif tetap sesuai.
-5. Cocokkan output dengan penjelasan pada buku.
+## Menjalankan Praktik
+
+Masuk ke folder bab yang ingin dicoba.
 
 Contoh:
 
 ```bash
-cd bab07
-python code/generate_dataset.py
-python code/train_fasterrcnn.py
+cd bab03
+python run_all_bab03.py
 ```
+
+Beberapa bab memiliki `run_all_babXX.py` untuk menjalankan rangkaian eksperimen secara berurutan.
+
+Bab yang hanya memiliki satu praktik dapat dijalankan langsung dari folder `code`.
+
+Contoh:
+
+```bash
+cd bab01
+python code/praktik_bab01.py
+```
+
+Output yang dihasilkan program dapat berupa nilai numerik, file JSON, model, atau visualisasi. Sebagian output tidak disimpan di repository dan akan dibuat kembali ketika praktik dijalankan.
+
+---
+
+## Dataset dan Aset
+
+Repository menggunakan kombinasi:
+
+- citra milik penulis;
+- citra atau dataset sintetis yang dibuat melalui kode;
+- dataset publik dengan sumber yang terdokumentasi.
+
+Beberapa praktik dapat mengunduh dataset publik ketika pertama kali dijalankan. Dataset berukuran besar tidak disertakan langsung di repository.
+
+Informasi sumber dan status penggunaan aset tersedia pada:
+
+`ASSET_LICENSES.md`
+
+---
+
+## Catatan Praktik
+
+### CNN
+
+Praktik CNN menggunakan dataset **EuroSAT** untuk memperkenalkan proses pembelajaran fitur visual dan klasifikasi citra.
+
+Dataset tidak disimpan di repository dan dapat diunduh oleh script ketika praktik pertama kali dijalankan.
+
+### Transfer Learning
+
+Praktik Transfer Learning menggunakan **MobileNetV2** dan subset dari **Oxford-IIIT Pet**.
+
+Bobot pretrained dan dataset dapat diunduh ketika praktik dijalankan untuk pertama kali.
+
+### Object Detection
+
+Praktik Object Detection menggunakan **Faster R-CNN (`torchvision`)** dan dataset sintetis yang dibuat secara programatik.
+
+Pendekatan ini memungkinkan pembaca mempelajari konsep bounding box, prediksi objek, dan evaluasi deteksi tanpa harus menyimpan dataset berukuran besar di repository.
+
+### Image Segmentation
+
+Praktik Image Segmentation menggunakan **Mini U-Net** dan pasangan citra-mask sintetis.
+
+Dataset dibuat secara deterministik melalui kode sehingga eksperimen dapat direproduksi.
+
+### Medical Imaging dan Medical AI
+
+Praktik pada bagian Medical Imaging menggunakan data sintetis dan tidak menggunakan data pasien nyata.
+
+Contoh Medical AI ditujukan untuk mempelajari konsep seperti sensitivity, specificity, threshold, calibration, dan interpretasi hasil evaluasi model.
+
+Contoh tersebut **bukan perangkat diagnosis dan bukan sistem untuk pengambilan keputusan klinis**.
+
+---
 
 ## Reproducibility
 
-Output numerik yang dicantumkan sebagai hasil eksperimen harus berasal dari kode,
-aset, dan konfigurasi yang terdokumentasi. Dataset sintetis menggunakan seed tetap
-bila tersedia. Praktik Medical Imaging/Medical AI dalam repository ini bersifat
-pedagogis dan **bukan** validasi klinis.
+Repository dirancang agar praktik utama dapat dijalankan kembali menggunakan:
 
-## Data dan aset
+**kode yang sama + data yang sama atau proses pembentukan data yang terdokumentasi + environment yang terdokumentasi.**
 
-- `kucing.jpg` dan `jeruk.jpg`: foto milik penulis.
-- Dataset sintetis: dibuat programatik untuk praktik buku.
-- Dataset/model pihak ketiga hanya digunakan pada bagian yang memang memerlukannya
-  dan ketentuannya diringkas di `ASSET_LICENSES.md`.
-- Dataset atau metode lama yang tidak lagi dipakai pada Compact Edition tidak
-  dicantumkan sebagai bagian aktif repository ini.
+Untuk melakukan pemeriksaan struktur repository:
 
-## Object Detection
+```bash
+python verify_repository.py
+```
 
-Bab 7 menggunakan **Faster R-CNN (torchvision)** dan dataset sintetis. Repository
-Compact Edition tidak menggunakan Ultralytics YOLO/COCO8 sebagai praktik buku.
+Beberapa hasil numerik dapat sedikit berbeda akibat versi library, hardware, backend komputasi, atau operasi floating-point.
 
-## Medical AI
+---
 
-Materi dan kode pada Bab 9–10 ditujukan untuk pendidikan. Output model, mask,
-measurement, probability, atau visualisasi tidak boleh diperlakukan sebagai
-diagnosis medis atau pengganti tenaga kesehatan.
+## Tentang Buku
 
-## Status Release Candidate
+**Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis** mengajak pembaca memahami bagaimana komputer mulai dari membaca angka-angka pixel hingga mampu menemukan pola dan menghasilkan informasi dari sebuah citra.
 
-Paket ini adalah **GitHub Release Candidate v1.0**. Clean-run Bab 1–10 telah dilakukan
-bertahap pada environment penulis. Pemeriksaan struktur tambahan tersedia melalui
-`python verify_repository.py`. **Jangan ubah repository menjadi Public sebelum keputusan
-lisensi kode dan audit lisensi aset final selesai.**
+Pembahasan bergerak dari konsep dasar menuju Machine Learning, Deep Learning, CNN, Transfer Learning, Object Detection, Image Segmentation, Vision Transformer, Medical Imaging, dan Medical AI.
 
-## Sitasi
+Fokus buku bukan sekadar menjalankan model, tetapi memahami hubungan:
 
-Informasi bibliografis final buku/ISBN dapat ditambahkan setelah diterbitkan.
+**masalah → data → representasi → metode → model → output → evaluasi → keterbatasan → penggunaan**
 
-## Lisensi
+Dalam konteks Medical AI, perhatian juga diberikan pada validasi, generalisasi, bias, keselamatan, konteks klinis, dan peran manusia dalam penggunaan AI.
 
-Lisensi kode dan lisensi aset dipisahkan. Lihat `LICENSE` dan `ASSET_LICENSES.md`.
+---
+
+## Lisensi dan Atribusi
+
+Kode, dataset, model pretrained, dan aset visual dapat memiliki ketentuan penggunaan yang berbeda.
+
+Informasi sumber dan atribusi aset repository tersedia pada `ASSET_LICENSES.md`.
+
+Lisensi kode repository akan dicantumkan secara terpisah sebelum repository dirilis untuk penggunaan publik.
+
+---
+
+## Citation
+
+Jika repository ini digunakan dalam kegiatan akademik, pembelajaran, atau penelitian, silakan merujuk pada buku:
+
+**Sri Mulyono. _Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis_.**
+
+Informasi bibliografi lengkap akan diperbarui setelah buku diterbitkan.
+
+---
+
+## Disclaimer
+
+Repository ini dibuat untuk tujuan **pendidikan dan pembelajaran**.
+
+Contoh yang berkaitan dengan citra medis dan Medical AI tidak dimaksudkan sebagai alat diagnosis, rekomendasi terapi, atau pengganti pertimbangan tenaga kesehatan.
