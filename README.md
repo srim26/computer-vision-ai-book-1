@@ -191,7 +191,9 @@ Kode, dataset, model pretrained, dan aset visual dapat memiliki ketentuan penggu
 
 Informasi sumber dan atribusi aset repository tersedia pada `ASSET_LICENSES.md`.
 
-Lisensi kode repository akan dicantumkan secara terpisah sebelum repository dirilis untuk penggunaan publik.
+Kode sumber yang dibuat khusus untuk repository ini tersedia di bawah MIT License. Lihat file `LICENSE`.
+
+Lisensi MIT tersebut tidak otomatis berlaku untuk foto, dataset pihak ketiga, pretrained weights, teks buku, ilustrasi, atau aset lainnya. Ketentuan sumber dan penggunaan aset dijelaskan dalam `ASSET_LICENSES.md`.
 
 ---
 
