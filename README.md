@@ -201,10 +201,9 @@ Lisensi MIT tersebut tidak otomatis berlaku untuk foto, dataset pihak ketiga, pr
 
 Jika repository ini digunakan dalam kegiatan akademik, pembelajaran, atau penelitian, silakan merujuk pada buku:
 
-**Sri Mulyono. _Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis_.**
+**Sri Mulyono, Kusworo Adi, dan Aris Sugiharto. _Computer Vision & AI: Dari Pixel hingga Analisis Citra Medis_.**
 
 Informasi bibliografi lengkap akan diperbarui setelah buku diterbitkan.
-
 ---
 
 ## Disclaimer
